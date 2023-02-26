@@ -3,6 +3,9 @@
 
 This is a documentation for the "vue-window-manager" module. This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.
 
+![ダウンロード](https://user-images.githubusercontent.com/29545778/221391695-ee4707d0-ff76-4235-af91-450b8adf67ca.gif)
+
+
 To install the package, use the following command:
 
 ```
