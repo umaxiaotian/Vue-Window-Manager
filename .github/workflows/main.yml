@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.17.0"
+          registry-url: https://npm.pkg.github.com/
+
+      - name: yarn install
+        run: yarn install
+
+      - name: build
+        run: yarn build
+
+      - name: publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
