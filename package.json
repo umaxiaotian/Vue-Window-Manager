@@ -8,6 +8,7 @@
   "types": "./dist/index.d.ts",
   "module": "./dist/my-vue-libs-es.js",
   "main": "./dist/my-vue-libs-umd.js",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/my-vue-libs-es.js",
