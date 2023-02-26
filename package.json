@@ -21,6 +21,13 @@
     "Vuejs",
     "Vue3"
   ],
+  "publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/umaxiaotian/Vue-Window-Manager.git"
+	},
   "scripts": {
     "dev": "vite",
     "build": "vite build",
