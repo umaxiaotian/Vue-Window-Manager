@@ -1,9 +1,9 @@
 {
   "name": "vue-window-manager",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "description": "window Components",
+  "description": "This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.",
   "files": ["dist"],
   "types": "./dist/index.d.ts",
   "module": "./dist/my-vue-libs-es.js",

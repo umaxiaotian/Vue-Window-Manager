@@ -12,7 +12,6 @@ npm install vue-window-manager
 To use the package, import it in the component where it will be used and include it as a component. Then, add the component's tag to the template section with the desired attributes.
 
 ```
-jsxCopy code
 <script>
 import { onMounted, defineComponent, ref } from "vue";
 import  vueWindowManager from 'vue-window-manager';
