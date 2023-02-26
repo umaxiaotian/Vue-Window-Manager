@@ -1,12 +1,24 @@
 {
-  "name": "vue-popupwindow",
-  "private": true,
-  "version": "0.0.0",
+  "name": "vue-window-manager",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "description": "window Components",
+  "files": ["dist"],
+  "types": "./dist/index.d.ts",
+  "module": "./dist/my-vue-libs-es.js",
+  "main": "./dist/my-vue-libs-umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-vue-libs-es.js",
+      "require": "./dist/my-vue-libs-umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate":"npx vite build"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",

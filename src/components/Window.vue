@@ -118,7 +118,6 @@ export default defineComponent({
         buttonsCol.value++;
       }
       buttonAreaWidth.value = buttonsCol.value * 46.6;
-      // console.log(isResizingData.value);
     };
     const endDrag = (data) => {
       leftData.value = data.left;
@@ -127,13 +126,12 @@ export default defineComponent({
       widthData.value = data.width;
     };
     const minimize = () => {
-      console.log("CALL MIN");
+      ctx.emit("clickMin", windowIdData.value);
     };
     const activeMouse = () => {
       ctx.emit("clickWindow", windowIdData.value);
     };
     const maximize = () => {
-      console.log("CALL MAX");
       if (isMaximizedData.value) {
         isMaximizedData.value = false;
       } else {
@@ -251,20 +249,9 @@ export default defineComponent({
         <div class="button close" @click="close">&#10005;</div>
       </div>
     </div>
-
-
-
-    <div :style="` width:inherit`">
-
-
+    <div :style="` width:inherit;`">
       <slot />
-
-
-
-
     </div>
-
-
   </vue-resizable>
 </template>
 <style scoped>

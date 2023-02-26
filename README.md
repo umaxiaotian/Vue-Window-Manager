@@ -1,18 +1,233 @@
-# Vue 3 + TypeScript + Vite
+# Vue-Window-Manager
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+This is a documentation for the "vue-window-manager" module. This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+To install the package, use the following command:
 
-## Type Support For `.vue` Imports in TS
+```
+npm install vue-window-manager
+```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+To use the package, import it in the component where it will be used and include it as a component. Then, add the component's tag to the template section with the desired attributes.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```
+jsxCopy code
+<script>
+import { onMounted, defineComponent, ref } from "vue";
+import  vueWindowManager from 'vue-window-manager';
+export default defineComponent({
+  components: {
+    vueWindowManager
+  },
+},);
+</script>
+<template>
+  <div style="height:100vh; width: 100wh;">
+    <vueWindowManager
+          :isActive=true
+          :zindex=1
+          :top=0
+          :left= 0
+          :width= 500
+          :height= 500
+          :minWidth= 500
+          :minHeight= 500
+          :isDragging= true
+          :isResizing="['r', 'rb', 'b', 'lb', 'l', 'lt', 't', 'rt']"
+          :isButtonMaximized= true
+          :isButtonMinimized= true
+          :isMaximized= false
+          :maxWidth= 500
+          :maxHeight= 500
+           windowId=1
+          title="ウィンドウコンポーネント３"
+          titleIcon="https://cdn-icons-png.flaticon.com/512/337/337948.png"
+          @clickWindow=""
+          @clickDestroy=""
+          @clickMin=""
+					>
+          <div style="background-color: black;height: 100%;">
+                <a>TESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TTESTTESTTESTTESTTESTTESTTESTTESTTEST
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
+                  TTESTTEST
+                </a>
+          </div>
+    </vueWindowManager>
+  </div>
+</template><style>
+body {
+  background-color: #2a6a83;
+}
+</style>
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```
+
+Below are the API details for the **`<vueWindowManager>`** component:
+
+### **Props**
+
+### **`isActive`**
+
+Controls whether the window is displayed or not.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`zindex`**
+
+The z-index value of the window relative to the parent component.
+
+- Type: **`Number`**
+- Default: **`true`**
+
+### **`width`**
+
+The width of the window in pixels or "auto".
+
+- Type: **`[Number, String]`**
+- Default: **`undefined`**
+
+### **`minWidth`**
+
+The minimum width of the window.
+
+- Type: **`Number`**
+- Default: **`0`**
+
+### **`maxWidth`**
+
+The maximum width of the window.
+
+- Type: **`Number`**
+- Default: **`undefined`**
+
+### **`height`**
+
+The height of the window in pixels or "auto".
+
+- Type: **`[Number, String]`**
+- Default: **`undefined`**
+
+### **`minHeight`**
+
+Minimum height
+
+- Type: **`Number`**
+- Default: **`0`**"
+
+### **`maxHeight`**
+
+Maximum height
+
+- Type: **`Number`**
+- Default: **`undefined`**"
+
+### **`left`**
+
+Offset left from parent
+
+- Type: **`[Number, String]`**
+- Default: **`0`**"
+
+### **`top`**
+
+Offset top from parent
+
+- Type: **`[Number, String]`**
+- Default: **`0`**"
+
+### **`isMaximize`**
+
+Determines whether to maximize the window.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`title`**
+
+Specifies the title of the window.
+
+- Type: **`String`**
+- Default: **`''`**
+
+### **`titleIcon`**
+
+Determines the icon of the window.
+
+- Type: **`String`**
+- Default: **`''`**
+
+### **`isDragging`**
+
+Determines whether to change the position of the window.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`isButtonMaximized`**
+
+Determines whether to display the maximize button.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`isButtonMinimized`**
+
+Determines whether to display the minimize button.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`isMaximize`**
+
+Determines whether to maximize the window.
+
+- Type: **`Boolean`**
+- Default: **`null`**
+
+### **`windowId`**
+
+Determines the ID of the window.
+
+- Type: **`String`**
+- Default: **`''`**
+
+### **Actions**
+
+### **`clickWindow`**
+
+Fires when the window is clicked.
+Returns: WindowId
+
+- Type: **`String`**
+- Default: **`''`**
+
+### **`clickDestroy`**
+
+Fires when the window's close button is clicked.
+Returns: WindowId
+
+- Type: **`String`**
+- Default: **`''`**
+
+### **`clickMin`**
+
+Fires when the window's minimize button is clicked.
+Returns: WindowId
+
+- Type: **`String`**
+- Default: **`''`**
+
+## **License**
+
+MIT License (c) 2023 YUMA OBATA"
