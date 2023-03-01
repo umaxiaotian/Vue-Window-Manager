@@ -3,6 +3,8 @@
 
 This is a documentation for the "vue-window-manager" module. This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.
 
+If you have a feature request, please submit it as a GitHub issue.
+
 ![ダウンロード](https://user-images.githubusercontent.com/29545778/221391695-ee4707d0-ff76-4235-af91-450b8adf67ca.gif)
 
 
@@ -36,7 +38,6 @@ export default defineComponent({
   <div style="height:100vh; width: 100wh;">
     <vueWindowManager
           :isActive=true
-          :zindex=1
           :top=0
           :left= 0
           :width= 500
@@ -51,7 +52,7 @@ export default defineComponent({
           :maxWidth= 500
           :maxHeight= 500
            windowId=1
-          title="ウィンドウコンポーネント３"
+          title="ウィンドウコンポーネントサンプル"
           titleIcon="https://cdn-icons-png.flaticon.com/512/337/337948.png"
           @clickWindow=""
           @clickDestroy=""
@@ -86,157 +87,38 @@ Below are the API details for the **`<vueWindowManager>`** component:
 
 ### **Props**
 
-### **`isActive`**
 
-Controls whether the window is displayed or not.
+| Property | Description | Type | Default |
+| --- | --- | --- | --- |
+| isActive | Controls whether the window is displayed or not. | Boolean | null |
+| width | The width of the window in pixels or "auto". | [Number, String] | undefined |
+| minWidth | The minimum width of the window. | Number | 0 |
+| maxWidth | The maximum width of the window. | Number | undefined |
+| height | The height of the window in pixels or "auto". | [Number, String] | undefined |
+| minHeight | The minimum height of the window. | Number | 0 |
+| maxHeight | The maximum height of the window. | Number | undefined |
+| left | Offset left from parent | [Number, String] | 0 |
+| top | Offset top from parent | [Number, String] | 0 |
+| isMaximize | Determines whether to maximize the window. | Boolean | null |
+| title | Specifies the title of the window. | String | '' |
+| titleIcon | Determines the icon of the window. | String | '' |
+| isDragging | Determines whether to change the position of the window. | Boolean | null |
+| isButtonMaximized | Determines whether to display the maximize button. | Boolean | null |
+| isButtonMinimized | Determines whether to display the minimize button. | Boolean | null |
+| windowId | Determines the ID of the window. | String | '' |
 
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`zindex`**
-
-The z-index value of the window relative to the parent component.
-
-- Type: **`Number`**
-- Default: **`true`**
-
-### **`width`**
-
-The width of the window in pixels or "auto".
-
-- Type: **`[Number, String]`**
-- Default: **`undefined`**
-
-### **`minWidth`**
-
-The minimum width of the window.
-
-- Type: **`Number`**
-- Default: **`0`**
-
-### **`maxWidth`**
-
-The maximum width of the window.
-
-- Type: **`Number`**
-- Default: **`undefined`**
-
-### **`height`**
-
-The height of the window in pixels or "auto".
-
-- Type: **`[Number, String]`**
-- Default: **`undefined`**
-
-### **`minHeight`**
-
-Minimum height
-
-- Type: **`Number`**
-- Default: **`0`**"
-
-### **`maxHeight`**
-
-Maximum height
-
-- Type: **`Number`**
-- Default: **`undefined`**"
-
-### **`left`**
-
-Offset left from parent
-
-- Type: **`[Number, String]`**
-- Default: **`0`**"
-
-### **`top`**
-
-Offset top from parent
-
-- Type: **`[Number, String]`**
-- Default: **`0`**"
-
-### **`isMaximize`**
-
-Determines whether to maximize the window.
-
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`title`**
-
-Specifies the title of the window.
-
-- Type: **`String`**
-- Default: **`''`**
-
-### **`titleIcon`**
-
-Determines the icon of the window.
-
-- Type: **`String`**
-- Default: **`''`**
-
-### **`isDragging`**
-
-Determines whether to change the position of the window.
-
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`isButtonMaximized`**
-
-Determines whether to display the maximize button.
-
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`isButtonMinimized`**
-
-Determines whether to display the minimize button.
-
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`isMaximize`**
-
-Determines whether to maximize the window.
-
-- Type: **`Boolean`**
-- Default: **`null`**
-
-### **`windowId`**
-
-Determines the ID of the window.
-
-- Type: **`String`**
-- Default: **`''`**
 
 ### **Actions**
 
-### **`clickWindow`**
 
-Fires when the window is clicked.
-Returns: WindowId
+| Name           | Description                                                    | Type     | Default |
+| -------------- | -------------------------------------------------------------- | -------- | ------- |
+| `clickWindow`  | Fires when the window is clicked.                              | `String` | `''`    |
+| `clickDestroy` | Fires when the window's close button is clicked.                | `String` | `''`    |
+| `clickMin`     | Fires when the window's minimize button is clicked.             | `String` | `''`    |
 
-- Type: **`String`**
-- Default: **`''`**
 
-### **`clickDestroy`**
 
-Fires when the window's close button is clicked.
-Returns: WindowId
-
-- Type: **`String`**
-- Default: **`''`**
-
-### **`clickMin`**
-
-Fires when the window's minimize button is clicked.
-Returns: WindowId
-
-- Type: **`String`**
-- Default: **`''`**
 
 ## **License**
 
