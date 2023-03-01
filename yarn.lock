@@ -479,7 +479,7 @@ vue-resizable@^2.1.7:
   resolved "https://registry.yarnpkg.com/vue-resizable/-/vue-resizable-2.1.7.tgz#c29421810a95a8effaaa3f44b04980ab7afa4849"
   integrity sha512-zEbWhRR8iXT8+nt3u8rkfrNpkPNsPkf7HteBh+AlPIsJ7rf9fyNwMqr0Q4FRzIpNIpZD5Zrr4+3+YELU0vc1Iw==
 
-vue@^3.2.45:
+vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
   integrity sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==

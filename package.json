@@ -38,7 +38,7 @@
     "bootstrap": "^5.2.3",
     "sass": "^1.58.3",
     "typescript": "^4.9.5",
-    "vue": "^3.2.45",
+    "vue": "^3.2.47",
     "vue-resizable": "^2.1.7"
   },
   "devDependencies": {
