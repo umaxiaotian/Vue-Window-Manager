@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: (format) => `my-vue-libs-${format}.js`
     },
     rollupOptions: {
-      external: "vue-window-manager",
+      external: "vue",
       output: {
         globals: {
           vue: "Vue",
