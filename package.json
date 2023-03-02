@@ -1,6 +1,6 @@
 {
   "name": "vue-window-manager",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "main": "dist/your-package-name.common.js",
   "module": "dist/your-package-name.esm.js",
