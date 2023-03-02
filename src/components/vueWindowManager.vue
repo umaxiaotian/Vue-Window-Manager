@@ -6,7 +6,7 @@ import {
   watch,
   onMounted,
 } from "vue";
-import VueResizable from "vue-resizable";
+import VueResizable from 'vue-resizable'
 export default defineComponent({
   components: { VueResizable },
   props: {
@@ -57,9 +57,6 @@ export default defineComponent({
     },
     windowId: {
       type: String,
-    },
-    isMaximized: {
-      type: Boolean,
     },
     isButtonMaximized: {
       type: Boolean,
@@ -175,7 +172,7 @@ export default defineComponent({
       isActiveData.value = newValue;
     });
     watch(isMaximized, (newValue) => {
-      tisMaximizedData = newValue;
+      isMaximizedData.value = newValue;
     });
     watch(maxWidth, (newValue) => {
       maxWidthData.value = newValue;

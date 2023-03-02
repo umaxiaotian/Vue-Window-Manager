@@ -1,21 +1,21 @@
 {
   "name": "vue-window-manager",
-  "private": false,
-  "version": "0.1.5",
-  "type": "module",
+  "version": "0.1.7",
+  "private": true,
+  "main": "dist/your-package-name.common.js",
+  "module": "dist/your-package-name.esm.js",
   "description": "This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.",
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/index.d.ts",
-  "module": "./dist/my-vue-libs-es.js",
-  "main": "./dist/my-vue-libs-umd.js",
   "license": "MIT",
-  "exports": {
-    ".": {
-      "import": "./dist/my-vue-libs-es.js",
-      "require": "./dist/my-vue-libs-umd.js"
-    }
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "generate": "vue-cli-service build --target lib --name your-package-name --dest dist src/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-resizable": "^2.1.7"
   },
   "keywords": [
     "Window",
@@ -28,19 +28,33 @@
     "type": "git",
     "url": "https://github.com/umaxiaotian/Vue-Window-Manager.git"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "generate": "npx vite build && npx tsc --emitDeclarationOnly"
-  },
-  "dependencies": {
-    "typescript": "^4.9.5",
-    "vue": "^3.2.47",
-    "vue-resizable": "^2.1.7"
-  },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "vite": "^4.1.4"
-  }
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
