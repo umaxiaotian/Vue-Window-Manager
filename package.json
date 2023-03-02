@@ -3,17 +3,23 @@
   "version": "0.2.2",
   "private": false,
   "type": "module",
-  "module": "dist/vueWindowManager.umd.js",
+  "module": "./dist/vueWindowManager.umd.js",
   "files": [
     "dist/*"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/my-vue-libs-es.js",
+      "require": "./dist/vueWindowManager.umd.js"
+    }
+  },
   "description": "This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.",
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "generate": "vue-cli-service build --target lib --name vueWindowManager --dest dist src/index.js"
+    "generate": " rollup -c"
   },
   "keywords": [
     "Window",
@@ -28,6 +34,10 @@
   },
   "dependencies": {
     "@vue/cli-service": "^5.0.8",
+    "postcss": "^8.4.21",
+    "rollup": "^3.18.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
     "vue": "^3.2.13",
     "vue-resizable": "^2.1.7"
   }

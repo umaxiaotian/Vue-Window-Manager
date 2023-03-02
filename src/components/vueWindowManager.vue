@@ -251,7 +251,7 @@ export default defineComponent({
     </div>
   </vue-resizable>
 </template>
-<style scoped>
+<style lang="css" scoped>
 .obaWindowStyle {
   border: 1px solid #263243;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
