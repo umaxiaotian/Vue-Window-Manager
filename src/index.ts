@@ -1,3 +1,3 @@
-import vuePopupWindow from "./components/Window.vue";
+import vueWindowManager from "./components/Window.vue";
 
-export { vuePopupWindow }
+export { vueWindowManager }
