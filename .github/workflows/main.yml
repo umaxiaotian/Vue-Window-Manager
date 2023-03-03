@@ -21,11 +21,11 @@ jobs:
           node-version: "18.14.2"
           registry-url: https://npm.pkg.github.com/
 
-      - name: yarn install
-        run: yarn install
+      - name: npm install
+        run: npm install
 
       - name: generate
-        run: yarn generate
+        run: npm run generate
 
       - run: npm publish
         env:
