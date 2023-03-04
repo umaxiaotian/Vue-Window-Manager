@@ -45,7 +45,6 @@ export default defineComponent({
           :height= 500
           :minWidth= 500
           :minHeight= 500
-          :isDragging= true
           :isResizing="['r', 'rb', 'b', 'lb', 'l', 'lt', 't', 'rt']"
           :isButtonMaximized= true
           :isButtonMinimized= true
@@ -103,7 +102,6 @@ Below are the API details for the **`<vueWindowManager>`** component:
 | isMaximize | Determines whether to maximize the window. | Boolean | null |
 | title | Specifies the title of the window. | String | '' |
 | titleIcon | Determines the icon of the window. | String | '' |
-| isDragging | Determines whether to change the position of the window. | Boolean | null |
 | isButtonMaximized | Determines whether to display the maximize button. | Boolean | null |
 | isButtonMinimized | Determines whether to display the minimize button. | Boolean | null |
 | windowId | Determines the ID of the window. | String | '' |

@@ -28,9 +28,6 @@ export default defineComponent({
     minHeight: {
       type: Number,
     },
-    isDragging: {
-      type: Boolean,
-    },
     isResizing: {
       type: Array,
     },
@@ -73,7 +70,6 @@ export default defineComponent({
       height,
       minWidth,
       minHeight,
-      isDragging,
       isResizing,
       isActive,
       maxWidth,
@@ -92,7 +88,6 @@ export default defineComponent({
     const heightData = ref(height.value);
     const minWidthData = ref(minWidth.value);
     const minHeightData = ref(minHeight.value);
-    const isDraggingData = ref(isDragging.value);
     const isResizingData = ref(isResizing.value);
     const isActiveData = ref(isActive.value);
     const isMaximizedData = ref(isMaximized.value);
@@ -162,9 +157,6 @@ export default defineComponent({
     watch(minHeight, (newValue) => {
       minHeightData.value = newValue;
     });
-    watch(isDragging, (newValue) => {
-      isDraggingData.value = newValue;
-    });
     watch(isResizing, (newValue) => {
       isResizingData.value = newValue;
     });
@@ -207,7 +199,6 @@ export default defineComponent({
       heightData,
       minWidthData,
       minHeightData,
-      isDraggingData,
       isResizingData,
       isActiveData,
       isMaximizedData,
@@ -233,10 +224,25 @@ export default defineComponent({
 });
 </script>
 <template>
-  <vue-resizable v-if="isActiveData" style=" overflow-wrap: break-word;" class="obaWindowStyle" dragSelector=".toolbar"
-    :top=topData :left=leftData :width=widthData :height=heightData :maxWidth=maxWidthData :maxHeight=maxHeightData
-    :minWidth=minWidthData :min-height=minHeightData :active=isResizingData :maximize=isMaximizedData :fitParent=true
-    @drag:end="endDrag" @resize:end="endResize" @mousedown="activeMouse">
+  <vue-resizable
+   v-if="isActiveData"
+    style=" overflow-wrap: break-word;" 
+    class="obaWindowStyle"
+     dragSelector=".toolbar"
+    :top=topData 
+    :left=leftData 
+    :width=widthData 
+    :height=heightData
+     :maxWidth=maxWidthData
+      :maxHeight=maxHeightData
+    :minWidth=minWidthData
+     :min-height=minHeightData 
+     :active=isResizingData 
+     :maximize=isMaximizedData 
+     :fitParent=true
+    @drag:end="endDrag" 
+    @resize:end="endResize"
+     @mousedown="activeMouse">
     <div class="toolbar" :style="`grid-template-columns: 24px 1fr ${buttonAreaWidth}px; `">
       <div class="icon" :style="`background-image: url('${titleIconData}');`" />
       <div class="title">{{ titleData }}</div>
