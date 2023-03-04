@@ -6,7 +6,7 @@ import {
   watch,
   onMounted,
 } from "vue";
-import VueResizable from 'vue3-draggable-resizable'
+import VueResizable from 'vue-resizable'
 export default defineComponent({
   components: { VueResizable },
   props: {

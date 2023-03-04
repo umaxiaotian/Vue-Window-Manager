@@ -1,2 +1,4 @@
-import vueWindowManager from "./components/vueWindowManager.vue";
-export { vueWindowManager }
+import  vueWindowManager  from "./components/vueWindowManager.vue";
+export default {
+  components: { vueWindowManager }
+}

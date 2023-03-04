@@ -1,9 +1,10 @@
 <script>
-import { onMounted, defineComponent, ref } from "vue";
-import Window from "./src/components/vueWindowManager.vue";
+import { createApp , defineComponent, ref } from "vue";
+// import Window from "./src/components/vueWindowManager.vue";
+import  vueWindowManager  from "./dist/vueWindowManager.es";
 export default defineComponent({
   components: {
-    Window
+    'Window': vueWindowManager
   },
 },);
 </script>
