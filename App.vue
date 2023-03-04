@@ -10,72 +10,7 @@ export default defineComponent({
 },);
 </script>
 <template>
-  <div style="height:100vh; width: 100wh;">
-    <Window        
-    style="position: absolute;"
-          :isActive=true
-          :top=0
-          :left= 0
-          :width= 500
-          :height= 500
-          :minWidth= 500
-          :minHeight= 500
-          :isDragging= true
-          :isResizing="['r', 'rb', 'b', 'lb', 'l', 'lt', 't', 'rt']"
-          :isButtonMaximized= true
-          :isButtonMinimized= true
-          :isMaximized= false
-          :maxWidth= 500
-          :maxHeight= 500
-          windowId=1
-          title="ウィンドウサイズ固定"
-          titleIcon="https://cdn-icons-png.flaticon.com/512/337/337948.png"
-          @clickWindow=""
-          @clickDestroy=""
-          @clickMin="">
-          <div style="background-color: black;height: 100%;">        
-                <a>TESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TTESTTESTTESTTESTTESTTESTTESTTESTTEST
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TESTTESTTESTTESTTESTTESTTESTTESTTESTTES
-                  TTESTTEST
-                </a>
-          </div>
-    </Window>
-  <Window        
-  style="position: absolute;"
-          :isActive=true
-          :top=100
-          :left= 100
-          :width= 500
-          :height= 500
-          :minWidth= 500
-          :minHeight= 500
-          :isDragging= true
-          :isResizing="['r', 'rb', 'b', 'lb', 'l', 'lt', 't', 'rt']"
-          :isButtonMaximized= true
-          :isButtonMinimized= true
-          :isMaximized= false
-          :maxWidth= 1000
-          :maxHeight= 1000
-          windowId=2
-          title="マイプロフィール"
-          titleIcon="https://cdn-icons-png.flaticon.com/512/337/337948.png"
-          @clickWindow=""
-          @clickDestroy=""
-          @clickMin="">
-          <div style="background-color: black;height: 100%;">        
-            <iframe src="https://www.umaxiaotian.com/" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-    </Window>
+  <div style="height:100vh; width: 100%;">
   <Window        
   style="position: absolute;"
           :isActive=true
@@ -85,7 +20,6 @@ export default defineComponent({
           :height= 500
           :minWidth= 500
           :minHeight= 500
-          :isDragging= true
           :isResizing="['r', 'rb', 'b', 'lb', 'l', 'lt', 't', 'rt']"
           :isButtonMaximized= true
           :isButtonMinimized= true
