@@ -1,7 +1,7 @@
 {
   "name": "vue-window-manager",
   "private": false,
-  "version": "0.2.8",
+  "version": "0.2.9",
   "type": "module",
   "description": "This module allows the management of windows within a Vue.js application. The windows can be moved within a parent window using drag and drop.",
   "files": [
@@ -14,12 +14,10 @@
   "exports": {
     ".": {
       "import": "./dist/vueWindowManager.es.js",
-      "require": "./dist/vueWindowManager.umd.js"
+      "require": "./dist/vueWindowManager.umd.js",
+      "css":"./dist/css/windows10.css"
     }
   },
-  "style": [
-    "dist/style.css"
-  ],
   "keywords": [
     "Window",
     "UI",

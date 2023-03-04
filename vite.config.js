@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'src/components/vueWindowManager.vue',
+      entry: 'src/index.js',
       name: 'vueWindowManager',
       fileName: (format) => `vueWindowManager.${format}.js`,
     },
@@ -16,11 +16,15 @@ export default defineConfig({
       output: {
         // ESモジュールとして出力するようにします。
         format: 'es',
+        //CSSの書き出し
+        assetFileNames: "default.[ext]",
+      
       },
     },
     commonjsOptions: {
       esmExternals: true 
    },
   },
+  publicDir: "public",
 });
 

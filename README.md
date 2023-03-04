@@ -28,6 +28,7 @@ To use the package, import it in the component where it will be used and include
 <script>
 import { onMounted, defineComponent, ref } from "vue";
 import  vueWindowManager from 'vue-window-manager';
+import "vue-window-manager/dist/windows10.css"
 export default defineComponent({
   components: {
     vueWindowManager

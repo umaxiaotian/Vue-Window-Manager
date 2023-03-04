@@ -2,6 +2,7 @@
 import { createApp , defineComponent, ref } from "vue";
 // import Window from "./src/components/vueWindowManager.vue";
 import  vueWindowManager  from "./dist/vueWindowManager.es";
+import "./dist/css/windows10.css"
 export default defineComponent({
   components: {
     'Window': vueWindowManager

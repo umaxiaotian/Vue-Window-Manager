@@ -252,54 +252,5 @@ export default defineComponent({
   </vue-resizable>
 </template>
 <style lang="css" scoped>
-.obaWindowStyle {
-  border: 1px solid #263243;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-rows: 30px 1fr;
-  font-family: Arial;
-  font-size: 12px;
-  color: white;
-}
-.toolbar {
-  background: rgba(0, 0, 0, 0.644);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  display: grid;
-  align-items: center;
-  user-select: none;
-  padding-left: 4px;
-}
-.icon {
-  width: 16px;
-  height: 16px;
- 
-  background-size: cover;
-  justify-self: center;
-}
-.buttons {
-  height: 100%;
-  display: grid;
-
-}
-.button {
-  font-size: 14px;
-  cursor: default;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-.button:hover {
-  background: #858585;
-}
-.button:active {
-  background: #5f5f5f;
-}
-.close:hover {
-  background: #e81123;
-}
-.close:active {
-  background: #8b0a14;
-}
+@import '/css/windows10.css';
 </style>
