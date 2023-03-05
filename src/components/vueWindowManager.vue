@@ -252,7 +252,7 @@ export default defineComponent({
         <div class="button close" @click="close">&#10005;</div>
       </div>
     </div>
-    <div :style="` width:inherit;`">
+    <div style="height: inherit; width:inherit;">
       <slot />
     </div>
   </vue-resizable>
