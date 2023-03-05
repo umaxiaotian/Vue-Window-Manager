@@ -40,5 +40,8 @@ export default defineComponent({
 <style>
 body {
   background-color: #2a6a83;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 </style>
