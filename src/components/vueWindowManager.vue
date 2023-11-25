@@ -228,18 +228,18 @@ export default defineComponent({
    v-if="isActiveData"
     style=" overflow-wrap: break-word;" 
     class="obaWindowStyle"
-     dragSelector=".toolbar"
+    dragSelector=".toolbar"
     :top=topData 
     :left=leftData 
     :width=widthData 
     :height=heightData
-     :maxWidth=maxWidthData
-      :maxHeight=maxHeightData
+    :maxWidth=maxWidthData
+    :maxHeight=maxHeightData
     :minWidth=minWidthData
-     :min-height=minHeightData 
-     :active=isResizingData 
-     :maximize=isMaximizedData 
-     :fitParent=true
+    :min-height=minHeightData 
+    :active=isResizingData 
+    :maximize=isMaximizedData 
+    :fitParent=true
     @drag:end="endDrag" 
     @resize:end="endResize"
      @mousedown="activeMouse">
@@ -252,9 +252,7 @@ export default defineComponent({
         <div class="button close" @click="close">&#10005;</div>
       </div>
     </div>
-    <div style="height: inherit; width:inherit;">
       <slot />
-    </div>
   </vue-resizable>
 </template>
 <style lang="css" scoped>

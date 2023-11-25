@@ -12,7 +12,7 @@ export default defineComponent({
 <template>
   <div style="height:100%; width: 100%;">
   <Window        
-  style="position: absolute;"
+  style=  "position: absolute;"
           :isActive=true
           :top=200
           :left= 200
