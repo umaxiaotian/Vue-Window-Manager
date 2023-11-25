@@ -1,6 +1,7 @@
 .obaWindowStyle {
     border: 1px solid #263243;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: content-box;
     display: grid;
     grid-template-rows: 30px 1fr;
     font-family: Arial;
